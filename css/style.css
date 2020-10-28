@@ -1,0 +1,387 @@
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX       GLOBAL     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Parie 1 : global (redefinition de balises)*/
+/*=======   BOX SIZING  pour retirer heritage marges et padding  =============*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+html{
+    font-size: 62.5%; /* ---  valeur habituelle  ---*/
+}
+body{
+    padding: 0;
+    font-size: 1.6rem;
+}
+a{
+    text-decoration: none;
+}
+
+img, nav button, video{
+    width: 100%;
+}
+
+.maxcontent{
+    max-width: max-content;
+}
+
+body, header, main, nav, footer, section, video, .maxcontent{
+    margin: 0 auto;
+}
+
+/*------------   font family  et font size    ------------*/
+body, a, i, footer{
+    font-family: 'Open Sans', 'Arial', 'Sans Serif';
+}
+
+.uppercaz, nav button{
+    text-transform: uppercase;
+}
+
+header, footer, .center, #devd p{
+    text-align: center;
+}
+
+nav button, .maxcontent, video, .show, nav li a, nav button a, header h1 a{
+    display: block;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX     LAYOUT     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Partie 2 : Layout (definition des éléments de structures)*/
+
+section{
+    padding: 10px 0;
+}
+
+main, nav{
+    padding: 0 4rem;
+}
+
+main, nav{
+    width: 90%;
+}
+
+/*------------   LES CLASSES     ------------*/
+
+/*      CLASS  LI-DASH      */
+.li-dash {
+  list-style-type: none;
+}
+
+.li-dash > li:before {
+  content: "-";
+  margin-right: 1rem; 
+}
+
+.link1{
+    font-weight: bold;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX     MODULE    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Partie 3 : module (definition des éléments internes)*/
+
+/*-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-   HEADER  -X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-*/
+header {
+    margin-top: 0;
+}
+
+
+header h1 a{
+    padding: 1em;
+}
+
+header h1 img{
+    width: 280px;
+}
+
+nav ul{
+    list-style: none;
+    font-weight: bold;
+}
+
+nav li a, nav button a{
+    padding: 10px;
+    border-bottom: solid rgb(224, 215, 201) 1px;
+    text-indent: 10px;
+    text-align: left;
+}
+
+nav button{
+    border: none;
+    text-align: left;
+    font-weight: bold;
+}
+
+/*-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-   MAIN  -X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-*/
+
+#covid img{
+    border: solid grey 2px;
+}
+
+#devd p{
+    position: relative;
+    /*top: 20rem;*/
+    width: 80%;
+    font-size: 3rem;
+    margin: 0 auto;
+}
+
+#foot{
+    width: 2rem;
+}
+
+#slider-prev, #slider-next{
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    padding: 2rem;
+}
+
+video{
+    max-width: 80rem;
+}
+
+/*XXXXXXXXXXXXXXXXX  FOOTBALL html  XXXXXXXXXXXXXXXXX*/
+#slider3eme{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+#precedent, #suivant {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    font-size: 7rem;
+    padding: 1rem;
+    color: rgb(224, 115, 44);
+    display: inline-block;
+}
+
+#suivant {
+    float: right;
+}
+
+/*-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-   FOOTER  -X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-*/
+
+footer{
+    padding: 4rem;
+    margin-top: 3rem;
+}
+
+footer article{
+    font-size: 2rem;
+    margin: 2rem;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX     THEME     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Parie 4 : theme (definition des couleurs et background)    */
+
+body{
+    background-color: rgb(252, 248, 241);
+}
+
+header h1, footer{
+    background-color: rgb(224,115,44);
+}
+main, iframe{
+    background-color: white;
+}
+
+nav a{
+    color: rgb(234,146,36);
+}
+
+nav, nav button{
+    background-color: rgb(244, 219, 181);
+}
+
+h1 a, footer, footer a, #devd p, #slider-prev, #slider-next{
+    color: white;
+}
+
+.link1, #devd p{
+    color: rgb(224,115,44);
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    ETAT     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Partie 5 : état (definition des élémentS qui ont un état spécifique ou un changement d'état)*/
+
+.next-showHide{
+    display: none;
+}
+
+header nav li a:hover{
+    background-color: rgba(255, 250, 242, 0.8);
+    -webkit-transition: all 500ms ease-in;
+    -ms-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX     MEDIA QUERIES     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXX   TABLETTE  ET  +    XXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+@media screen and (min-width: 980px){
+
+    header, main{
+        width: 80%;
+    }
+
+    header, main, header nav li a, header h1, .a4, .fa4{
+        margin: 0 auto;
+    }
+
+    header nav, header nav li a, footer{
+        width: 100%;
+    }
+
+     .next-showHide, .fa4{  
+        display: block;
+    }
+
+    nav> ul > .nav-button > ul > li, .next-showHide > li, .next-showHide > .nav-button, header h1 img{
+        display: inline-block;
+    }
+    
+    .flexrow{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .art-dev{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        margin: 1em auto;
+        align-items: center;
+    }
+
+    .art-dev div{
+        display: flex;
+        flex-direction: column;
+        margin: 1em auto;
+        margin-right: 4rem; 
+    }
+
+    .flexrow > img{
+        width: 30%;
+        margin: 1em auto;
+    }
+
+    /*-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-   HEADER      -X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-*/
+
+    header h1 a{
+        height: 185px;
+        padding: 0;
+    }
+
+    header h1 img{
+        float: left;
+    }
+
+    header  h1 a, header nav ul, nav> ul > .nav-button > ul > li > ul > li{
+    font-weight: lighter;
+}
+
+    header .toggle-button, nav > ul > .nav-button > ul{
+        display: none;
+    }
+
+    /*XXXXXXXXXXXXXXXXX LA PREMIERE NAVIGATION  XXXXXXXXXXXXXXXXX*/
+
+    header nav{
+        background-color: rgb(224,115,44);
+        padding: 0;
+    }
+
+    header > nav > ul{
+        padding-inline-start: 0;
+    }
+
+    header nav > ul > .nav-button ul a{
+        color: rgb(224,115,44);
+    }
+
+    .next-showHide > li, .next-showHide > .nav-button{
+        width: 8%;
+        vertical-align: middle;
+    }
+
+    header nav li a{
+        padding: 0;
+        border-bottom: none;
+        text-indent: 0;
+        color: white;
+        text-align: center;
+    }
+
+    header nav li a:hover{
+        text-decoration: underline;
+        background-color: inherit;
+        -webkit-transition: none;
+        -ms-transition: none;
+        -moz-transition: none;
+    }
+
+    nav > ul > .nav-button:hover > ul{
+        max-height: 1000em;
+    }
+
+    /*XXXXXXXXXXXXXXXXX LES  SOUS-NAVIGATION  XXXXXXXXXXXXXXXXX*/
+
+    nav> ul > .nav-button > ul li{
+        padding: 0.5rem;
+    }
+
+    nav > ul > .nav-button > ul{
+        overflow: hidden;
+        display: block;
+        box-sizing: content-box;
+        position: absolute;
+        z-index: 1000;
+        max-height: 0;
+        left: 10%;
+        right: 10%;
+        -moz-transition: 0.3s all 0.3s;
+        -webkit-transition: 0.3s all 0.3s;
+        transition: 0.3s all 0.3s;
+        margin-top: 15px;
+        background-color: white;
+    }
+
+     nav > ul > .nav-button, nav > ul > li{
+        font-size: 1.4rem;
+        align-items: center;
+    }
+
+     nav> ul > .nav-button > ul > li{
+        width: 40%;
+        vertical-align: top;
+        margin: 1% 4% 1% 1%;
+        font-weight: bold;
+    }
+
+    /*-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-   MAIN     -X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-*/
+
+     .a4, .fa4{
+        max-width: 850px;
+     }
+
+    #devd p{
+    position: relative;
+    top: 20rem;
+    width: 80%;
+    font-size: 3rem;
+    margin: 0 auto;
+    color: white;
+
+}
